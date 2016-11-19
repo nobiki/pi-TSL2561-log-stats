@@ -1,1 +1,6 @@
 <%=@luxes.find(1).lux%>
+<p>
+<% Lux.find_each do |i| %>
+  <%=i.lux%><br>
+<% end %>
+</p>
