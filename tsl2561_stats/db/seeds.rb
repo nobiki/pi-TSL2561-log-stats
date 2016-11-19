@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+require "csv"
+
+CSV.foreach('db/seed/lux.csv') do |row|
+  Lux.create(:recorded_at => row[0], :lux  => row[1], :created_at => row[2], :updated_at => row[3])
+end
