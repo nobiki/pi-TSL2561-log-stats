@@ -1,6 +1,31 @@
-<%=@luxes.find(1).lux%>
-<p>
-<% Lux.find_each do |i| %>
-  <%=i.lux%><br>
-<% end %>
-</p>
+<div class="row">
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-0 main">
+  <h1 class="page-header">Dashboard</h1>
+
+  <div class="row placeholders">
+    <div class="col-xs-6 col-sm-10 placeholder">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+      <h4>Label</h4>
+      <span class="text-muted">Something else</span>
+    </div>
+  </div>
+
+  <h2 class="sub-header">Section title</h2>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>recorded_at</th>
+          <th>Lux</th>
+        </tr>
+      </thead>
+      <% Lux.find_each do |i| %>
+        <tr>
+          <td><%=i.recorded_at%></td>
+          <td><%=i.lux%></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+</div>
