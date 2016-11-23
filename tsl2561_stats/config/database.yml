@@ -15,7 +15,8 @@ default: &default
   pool: 5
   username: 9zilla
   password: 9zilla
-  host: my-gandamu
+  host: 192.168.11.16
+  port: 19036
 
 development:
   <<: *default
@@ -50,7 +51,4 @@ test:
 production:
   <<: *default
   database: tsl2561_stats_production
-  username: 9zilla
   password: <%= ENV['TSL2561_STATS_DATABASE_PASSWORD'] %>
-  port: 19036
-  host: 192.168.11.16
