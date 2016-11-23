@@ -17,7 +17,7 @@
           <th>Lux</th>
         </tr>
       </thead>
-      <% Lux.find_each do |i| %>
+      <% @luxes.each do |i| %>
         <tr>
           <td><%=i.recorded_at%></td>
           <td><%=i.lux%></td>
