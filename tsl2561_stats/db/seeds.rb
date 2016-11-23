@@ -12,3 +12,5 @@ require "csv"
 CSV.foreach('db/seed/lux.csv') do |row|
   Lux.create(:recorded_at => row[0], :lux  => row[1], :created_at => row[2], :updated_at => row[3])
 end
+
+Graph.create(:id => 1, :created_at => '2000-01-01 00:00:00', :updated_at => '2000-01-01 00:00:00')
