@@ -1,2 +1,29 @@
-<h1>StaticPages#realtime</h1>
-<p>Find me in app/views/static_pages/realtime.html.erb</p>
+<style>
+body {
+  background-color: #111;
+}
+.display {
+  background: url(/assets/dnumber.jpg) no-repeat;
+  display: block;
+  float: left;
+  width: 51px;
+  height: 82px;
+}
+
+.d0 {}
+.d1 {background-position: -51px 0px;}
+.d2 {background-position: -102px 0px;}
+.d3 {background-position: -153px 0px;}
+.d4 {background-position: -204px 0px;}
+.d5 {background-position: -255px 0px;}
+.d6 {background-position: -306px 0px;}
+.d7 {background-position: -357px 0px;}
+.d8 {background-position: -408px 0px;}
+.d9 {background-position: -459px 0px;}
+</style>
+
+
+<h1>StaticPages#realtime#</h1>
+<% @lux.to_s.chars.each do |i| %>
+  <span class="display d<%=i%>"></span>
+<% end %>

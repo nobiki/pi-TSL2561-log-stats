@@ -11,5 +11,8 @@ class StaticPagesController < ApplicationController
   end
 
   def realtime
+    Lux.order("recorded_at desc").limit(1).each do |i|
+      @lux = i.lux
+    end
   end
 end
