@@ -1,5 +1,5 @@
 development:
-	bundle exec unicorn -c config/unicorn.rb -E development
+	bundle exec unicorn -c config/unicorn.rb -D -E development
 
 production:
-	bundle exec unicorn -c config/unicorn.rb -E production
+	bundle exec unicorn -c config/unicorn.rb -D -E production
