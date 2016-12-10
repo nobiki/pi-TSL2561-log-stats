@@ -50,7 +50,7 @@ test:
 #
 production:
   <<: *default
-  host: 172.18.0.50
+  host: my-gandamu
   port: 3306
   database: tsl2561_stats_production
   password: <%= ENV['TSL2561_STATS_DATABASE_PASSWORD'] %>
